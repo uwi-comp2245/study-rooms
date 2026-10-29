@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="top">
+      <a href="#"><img src="logo.svg" width="200" height="40"></a>
+      <div class="menu">
+        <a href="#">Catalogue</a>
+        <a href="#">Study rooms</a>
+        <a href="#">Ask a librarian</a>
+      </div>
+      <button class="help-button" id="help-button">
+        <svg viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6V14M12 17.5v.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+
+    <div class="help" id="help" hidden>
+      <p>Rooms can be booked up to seven days ahead, for up to two hours at a time.</p>
+    </div>
+
+    <div class="content">
+      <div class="title">Book a study room</div>
+      <p class="intro">Group study rooms on the second floor, for two to ten people.</p>
+      <img class="border" src="border.svg" alt="decorative border image">
+
+      <h3>Rooms</h3>
+      <div class="rooms">
+        <img src="floor-plan.svg" width="420" height="240">
+        <table>
+          <tr><td>Room</td><td>Seats</td><td>Screen</td></tr>
+          <tr><td>A</td><td>4</td><td>No</td></tr>
+          <tr><td>B</td><td>6</td><td>Yes</td></tr>
+          <tr><td>C</td><td>10</td><td>Yes</td></tr>
+        </table>
+      </div>
+      <p>For the rules on noise, food and cancellations, <a href="#">click here</a>.</p>
+
+      <h5>Opening hours</h5>
+      <div class="toggle" id="hours-toggle">Show opening hours ▾</div>
+      <ul id="hours" hidden>
+        <li>Monday to Friday: 8:00 to 22:00</li>
+        <li>Saturday: 10:00 to 18:00</li>
+        <li>Sunday: closed</li>
+      </ul>
+
+      <h3>Your booking</h3>
+      <p class="hint">Fields in red are required.</p>
+      <div class="booking" id="booking">
+        <input class="required" id="name" type="text" placeholder="Name">
+        <input class="required" id="email" type="text" placeholder="Email">
+        <select id="room">
+          <option value="">Room</option>
+          <option>A</option>
+          <option>B</option>
+          <option>C</option>
+        </select>
+        <input class="required" id="date" type="date" tabindex="2">
+        <div class="book-button" id="book">Book room</div>
+        <div class="result" id="result"></div>
+      </div>
+      <p class="more"><a href="#">Read more</a></p>
+    </div>
+
+    <div class="bottom">Main Library · Second floor</div>
+  </body>
+</html>
